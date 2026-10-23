@@ -5,9 +5,318 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
-    <title>Document</title>
+    <!-- SEO -->
+  <title>MODU | Muebles y objetos contemporáneos</title>
+  <meta
+    name="description"
+    content="Descubre MODU Cyber Edition: muebles y objetos contemporáneos para crear espacios que cuentan historias. Explora nuestras colecciones y ofertas."
+  >
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MODU | Cyber Edition">
+  <meta
+    property="og:description"
+    content="No es solo una silla. Descubre muebles y objetos contemporáneos en MODU Cyber Edition."
+  >
+  <meta property="og:image" content="img/hero-silla.jpg">
+  <!-- Al publicar, utiliza una URL absoluta HTTPS para og:image -->
+   <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>¡Hola! Esta es mi landing page</h1>
+    <!-- Accesibilidad: saltar navegación -->
+  <a class="skip-link" href="#contenido">
+    Saltar al contenido principal
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+
+      <a class="logo" href="index.html" aria-label="MODU, inicio">
+        MODU
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#coleccion">Muebles</a></li>
+          <li><a href="#destacada">Sobre nosotros</a></li>
+          <li><a href="#newsletter">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="cart-link" href="#favoritos" aria-label="Ver productos destacados">
+        Ver productos
+      </a>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="container hero-content">
+
+        <p class="eyebrow">CYBER EDITION</p>
+
+        <h1 id="hero-title">
+          No es solo una silla.
+        </h1>
+
+        <p class="hero-description">
+          Hasta 50% OFF en piezas seleccionadas.
+        </p>
+
+        <a class="button button-primary" href="#favoritos">
+          Descubrir ofertas
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- BENEFICIO -->
+    <div class="benefit-banner">
+      <p>Compra hoy. Recibe hoy.</p>
+    </div>
+
+    <!-- CATEGORÍAS -->
+    <section
+      id="coleccion"
+      class="section collection"
+      aria-labelledby="collection-title"
+    >
+
+      <div class="container">
+
+        <h2 id="collection-title">
+          Descubre la colección
+        </h2>
+
+        <div class="category-grid">
+
+          <a class="category-card" href="#favoritos">
+            <img
+              src="img/sillas.jpg"
+              alt="Sillón de madera con cojín blanco en un espacio contemporáneo"
+              loading="lazy"
+            >
+            <span>Sillas</span>
+          </a>
+
+          <a class="category-card" href="#favoritos">
+            <img
+              src="img/sofas.jpg"
+              alt="Sofá claro acompañado de una mesa de centro de madera"
+              loading="lazy"
+            >
+            <span>Sofás</span>
+          </a>
+
+          <a class="category-card" href="#favoritos">
+            <img
+              src="img/escritorio.jpg"
+              alt="Escritorio de madera con lámpara blanca de diseño"
+              loading="lazy"
+            >
+            <span>Lámparas</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSAJE DE MARCA -->
+    <div class="brand-banner">
+      <div class="container brand-banner-content">
+
+        <div>
+          <p class="brand-claim">No es solo una silla.</p>
+          <p>Es donde empiezan las buenas historias.</p>
+        </div>
+
+        <p class="eyebrow">CYBER MODU</p>
+
+      </div>
+    </div>
+
+    <!-- COLECCIÓN DESTACADA -->
+    <section
+      id="destacada"
+      class="featured-section"
+      aria-labelledby="featured-title"
+    >
+
+      <div class="featured-image">
+        <img
+          src="img/coleccion-cafe.jpg"
+          alt="Silla de madera junto a una mesa con una taza de café y una intervención gráfica blanca"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="featured-content">
+
+        <p class="eyebrow">COLECCIÓN DESTACADA</p>
+
+        <h2 id="featured-title">
+          Hay conversaciones que merecen otra taza.
+        </h2>
+
+        <p>
+          Diseños que invitan a quedarse, compartir
+          y disfrutar de cada pausa.
+        </p>
+
+        <a class="button button-primary" href="#favoritos">
+          Explorar colección
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section
+      id="favoritos"
+      class="section products"
+      aria-labelledby="products-title"
+    >
+
+      <div class="container">
+
+        <h2 id="products-title">
+          Favoritos Cyber
+        </h2>
+
+        <div class="product-grid">
+
+          <article class="product-card">
+            <img
+              src="img/hero-silla.jpg"
+              alt="Silla de madera oscura junto a una mesa redonda y una taza"
+              loading="lazy"
+            >
+
+            <h3>Silla de madera</h3>
+
+            <a href="#newsletter">
+              Consultar por silla de madera
+            </a>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="img/sofas.jpg"
+              alt="Sofá contemporáneo de tapiz claro en una sala de estar"
+              loading="lazy"
+            >
+
+            <h3>Sofá contemporáneo</h3>
+
+            <a href="#newsletter">
+              Consultar por sofá contemporáneo
+            </a>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="img/escritorio.jpg"
+              alt="Escritorio natural de madera con silla y lámpara blanca"
+              loading="lazy"
+            >
+
+            <h3>Escritorio natural</h3>
+
+            <a href="#newsletter">
+              Consultar por escritorio natural
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section
+      id="newsletter"
+      class="newsletter"
+      aria-labelledby="newsletter-title"
+    >
+
+      <div class="container newsletter-content">
+
+        <div>
+          <h2 id="newsletter-title">
+            Un poco más de MODU
+          </h2>
+
+          <p>
+            Ideas, inspiración y novedades para tu hogar.
+          </p>
+        </div>
+
+        <form class="newsletter-form" action="#" method="post">
+
+          <label for="email">
+            Correo electrónico
+          </label>
+
+          <div class="form-row">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nombre@ejemplo.com"
+              autocomplete="email"
+              required
+            >
+
+            <button type="submit">
+              Suscribirme
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container footer-content">
+
+      <a class="logo" href="index.html" aria-label="MODU, volver al inicio">
+        MODU
+      </a>
+
+      <nav aria-label="Navegación del pie de página">
+        <ul class="footer-links">
+          <li><a href="#newsletter">Ayuda</a></li>
+          <li><a href="#newsletter">Contacto</a></li>
+          <li><a href="#coleccion">Muebles</a></li>
+        </ul>
+      </nav>
+
+      <small>
+        © 2026 MODU. Proyecto ficticio de diseño.
+      </small>
+
+    </div>
+
+  </footer>
 </body>
 </html>

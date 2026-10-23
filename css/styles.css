@@ -1,0 +1,648 @@
+
+/* ======================================
+   MODU — CYBER EDITION
+   MOBILE FIRST DESIGN SYSTEM
+====================================== */
+
+:root {
+  /* Colores */
+  --color-primary: #25231F;
+  --color-background: #FFFFFF;
+  --color-cream: #EAE5DD;
+  --color-accent: #B84430;
+  --color-text: #25231F;
+  --color-muted: #625B53;
+  --color-white: #FFFFFF;
+  --color-focus: #2463A6;
+
+  /* Tipografías */
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+
+  /* Escala tipográfica mobile */
+  --text-h1: 2.5rem;
+  --text-h2: 2rem;
+  --text-h3: 1.25rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+
+  /* Espaciado */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+
+  /* Layout */
+  --container-width: 1280px;
+  --page-gutter: 20px;
+  --border-radius: 4px;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: calc(100% - (var(--page-gutter) * 2));
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: var(--text-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+}
+
+.eyebrow {
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ======================================
+   ACCESSIBILITY + INTERACTION
+====================================== */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+a,
+button {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* ======================================
+   HEADER — MOBILE
+====================================== */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  background: var(--color-primary);
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-block: 16px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}
+
+.site-header nav {
+  order: 3;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-list a,
+.cart-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.cart-link:hover {
+  text-decoration: underline;
+}
+
+/* ======================================
+   HERO — MOBILE
+====================================== */
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  min-height: 540px;
+  padding-block: 48px;
+  color: white;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.08) 0%,
+      rgba(0,0,0,0.72) 100%
+    ),
+    url("../img/hero-silla.jpg");
+
+  background-size: cover;
+  background-position: 58% center;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.hero h1 {
+  max-width: 340px;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  max-width: 320px;
+  margin-bottom: 24px;
+}
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+.button,
+.newsletter-form button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: var(--border-radius);
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-primary,
+.newsletter-form button {
+  background: var(--color-primary);
+  color: white;
+}
+
+.button-primary:hover,
+.newsletter-form button:hover {
+  background: #45413B;
+}
+
+/* ======================================
+   BENEFIT BANNER
+====================================== */
+
+.benefit-banner {
+  padding: 20px;
+  background: var(--color-primary);
+  color: white;
+  text-align: center;
+}
+
+.benefit-banner p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ======================================
+   COLLECTION — GRID MOBILE
+====================================== */
+
+.collection h2,
+.newsletter h2 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.category-grid,
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.category-card {
+  display: block;
+  text-decoration: none;
+}
+
+.category-card img,
+.product-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.category-card span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.category-card:hover span {
+  color: var(--color-accent);
+}
+
+/* ======================================
+   BRAND BANNER — FLEXBOX
+====================================== */
+
+.brand-banner {
+  padding-block: 28px;
+  background: var(--color-primary);
+  color: white;
+}
+
+.brand-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand-banner p {
+  margin: 0;
+}
+
+.brand-claim {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* ======================================
+   FEATURED COLLECTION — GRID
+====================================== */
+
+.featured-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--color-cream);
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px var(--page-gutter);
+}
+
+.featured-content .eyebrow {
+  color: var(--color-accent);
+}
+
+.featured-content h2 {
+  max-width: 500px;
+}
+
+.featured-content .button {
+  margin-top: 16px;
+}
+
+/* ======================================
+   PRODUCTS
+====================================== */
+
+.product-card h3 {
+  margin-bottom: 8px;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.product-card a {
+  color: var(--color-accent);
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.product-card a:hover {
+  color: var(--color-primary);
+}
+
+/* ======================================
+   NEWSLETTER — MOBILE
+====================================== */
+
+.newsletter {
+  padding-block: 48px;
+  background: var(--color-cream);
+}
+
+.newsletter-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.newsletter h2 {
+  margin-bottom: 8px;
+}
+
+.newsletter p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #77716B;
+  background: white;
+}
+
+.form-row button {
+  width: 100%;
+}
+
+/* ======================================
+   FOOTER — MOBILE
+====================================== */
+
+.site-footer {
+  padding-block: 32px;
+  background: var(--color-primary);
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: var(--text-small);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-footer small {
+  font-size: 0.75rem;
+}
+
+/* ======================================
+   TABLET — 768px
+====================================== */
+
+@media (min-width: 768px) {
+
+  :root {
+    --page-gutter: 32px;
+    --text-h1: 3rem;
+    --text-h2: 2.25rem;
+  }
+
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+  }
+
+  .header-content {
+    flex-wrap: nowrap;
+    min-height: 80px;
+  }
+
+  .site-header nav {
+    order: 0;
+    width: auto;
+  }
+
+  .nav-list {
+    gap: 24px;
+  }
+
+  .hero {
+    min-height: 500px;
+    align-items: center;
+    background-position: center;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.05)
+      ),
+      url("../img/hero-silla.jpg");
+  }
+
+  .hero h1 {
+    max-width: 520px;
+  }
+
+  .category-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brand-banner-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .featured-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-image img {
+    max-height: none;
+  }
+
+  .featured-content {
+    padding: 40px;
+  }
+
+  .newsletter-content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ======================================
+   DESKTOP — 1024px
+====================================== */
+
+@media (min-width: 1024px) {
+
+  :root {
+    --page-gutter: 48px;
+    --text-h1: 3.5rem;
+    --text-h2: 2.5rem;
+    --space-xl: 4rem;
+    --space-xxl: 6rem;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero h1 {
+    max-width: 600px;
+  }
+
+  .category-grid,
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .featured-content {
+    padding: clamp(48px, 6vw, 100px);
+  }
+
+  .form-row {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .form-row input {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .form-row button {
+    width: auto;
+  }
+}
+
+/* ======================================
+   REDUCED MOTION
+====================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a,
+  button {
+    transition: none;
+  }
+}
